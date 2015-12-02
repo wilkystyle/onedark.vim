@@ -68,6 +68,7 @@ let s:green = { "gui": "#98C379", "cterm": "114", "cterm16": "2"}
 
 let s:yellow = { "gui": "#E5C07B", "cterm": "180", "cterm16": "3"}
 let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11"}
+let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11"}
 
 let s:blue = { "gui": "#61AFEF", "cterm": "39", "cterm16": "4"} " Alternate cterm: 75
 "let s:dark_blue = { "gui": "#6097dc", "cterm": "32", "cterm16": "12"}
@@ -80,13 +81,14 @@ let s:cyan = { "gui": "#56B6C2", "cterm": "38", "cterm16": "6"} " Alternate cter
 
 let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
 
-let s:black = { "gui": "#282C34", "cterm": "235", "cterm16": "8" }
+let s:black = { "gui": "#282C34", "cterm": "none", "cterm16": "none" }
 let s:visual_black = { "gui": "NONE", "cterm": "NONE", "cterm16": s:black.cterm16 } " Black out selected text in 16-color visual mode
+let s:real_black = { "gui": "#000000", "cterm": "0", "cterm16": s:black.cterm16 } " Black out selected text in 16-color visual mode
 
 let s:comment_grey = { "gui": "#5C6670", "cterm": "59", "cterm16": "15" }
 let s:gutter_fg_grey = { "gui": "#636D83", "cterm": "238", "cterm16": "15" }
 let s:gutter_bg_grey = { "gui": "#2C313A", "cterm": "NONE", "cterm16": "NONE" }
-let s:cursor_grey =  { "gui": "#2C323B", "cterm": "236", "cterm16": "15" } " TODO: This cterm16 value doesn't work great here
+let s:cursor_grey =  { "gui": "#2C323B", "cterm": "235", "cterm16": "15" } " TODO: This cterm16 value doesn't work great here
 let s:visual_grey = { "gui": "#3E4451", "cterm": "237", "cterm16": "15" }
 let s:special_grey = { "gui": "#383C45", "cterm": "238", "cterm16": "15" }
 let s:vertsplit = { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }
@@ -164,7 +166,7 @@ call s:h("PmenuSel", { "bg": s:visual_grey }) " Popup menu: selected item.
 call s:h("PmenuSbar", { "bg": s:visual_grey }) " Popup menu: scrollbar.
 call s:h("PmenuThumb", { "bg": s:white }) " Popup menu: Thumb of the scrollbar.
 call s:h("Question", { "fg": s:purple }) " hit-enter prompt and yes/no questions
-call s:h("Search", { "bg": s:visual_grey }) " Last search pattern highlighting (see 'hlsearch'). Also used for highlighting the current line in the quickfix window and similar items that need to stand out.
+call s:h("Search", { "fg": s:real_black, "bg": s:purple }) " Last search pattern highlighting (see 'hlsearch'). Also used for highlighting the current line in the quickfix window and similar items that need to stand out.
 call s:h("SpecialKey", { "fg": s:special_grey }) " Meta and special keys listed with ":map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
 call s:h("SpellBad", { "fg": s:red }) " Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
 call s:h("SpellCap", { "fg": s:dark_yellow }) " Word that should start with a capital. This will be combined with the highlighting used otherwise.
