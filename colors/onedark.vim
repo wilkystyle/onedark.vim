@@ -174,8 +174,8 @@ call s:h("SpellLocal", { "fg": s:dark_yellow }) " Word that is recognized by the
 call s:h("SpellRare", { "fg": s:dark_yellow }) " Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
 call s:h("StatusLine", { "fg": s:white }) " status line of current window
 call s:h("StatusLineNC", { "fg": s:comment_grey }) " status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-call s:h("TabLine", {}) " tab pages line, not active tab page label
-call s:h("TabLineFill", {}) " tab pages line, where there are no labels
+call s:h("TabLine", { "bg": s:special_grey }) " tab pages line, not active tab page label
+call s:h("TabLineFill", { "bg": s:special_grey }) " tab pages line, where there are no labels
 call s:h("TabLineSel", {}) " tab pages line, active tab page label
 call s:h("Title", { "fg": s:green }) " titles for output from ":set all", ":autocmd" etc.
 call s:h("Visual", { "fg": s:visual_black, "bg": s:visual_grey }) " Visual mode selection
