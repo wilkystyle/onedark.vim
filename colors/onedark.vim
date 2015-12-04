@@ -1,11 +1,9 @@
 " Vim Color File
 " Name:       onedark.vim
 " Version:    1.3
-" Maintainer: https://github.com/joshdick/onedark.vim/
+" Maintainer: https://github.com/wilkystyle/onedark.vim/
 " License:    The MIT License (MIT)
-" Based On:   https://github.com/MaxSt/FlatColor/
-
-" A companion [vim-airline](https://github.com/bling/vim-airline) theme is available at: https://github.com/joshdick/airline-onedark.vim
+" Based On:   https://github.com/joshdick/onedark.vim/
 
 " +----------------+
 " | Initialization |
@@ -28,13 +26,11 @@ if !exists("g:onedark_termcolors")
   let g:onedark_termcolors = 256
 endif
 
-" Mot all terminals support italics properly. If yours does, opt-in.
+" Not all terminals support italics properly. If yours does, opt-in.
 if !exists("g:onedark_terminal_italics")
   let g:onedark_terminal_italics = 0
 endif
 
-" This function was borrowed from FlatColor: https://github.com/MaxSt/FlatColor/
-" It was based on one found in hemisu: https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
   if g:onedark_terminal_italics == 0 && has_key(a:style, "cterm") && a:style["cterm"] == "italic"
     unlet a:style.cterm
