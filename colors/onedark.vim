@@ -63,7 +63,7 @@ endfunction
 let s:red = { "gui": "#E06C75", "cterm": "204", "cterm16": "1"} " Alternate cterm: 168
 let s:green = { "gui": "#98C379", "cterm": "114", "cterm16": "2"}
 let s:yellow = { "gui": "#E5C07B", "cterm": "180", "cterm16": "3"}
-let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11"}
+let s:search_yellow = { "gui": "#D19A66", "cterm": "221", "cterm16": "11"}
 let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11"}
 let s:blue = { "gui": "#61AFEF", "cterm": "39", "cterm16": "4"} " Alternate cterm: 75
 let s:purple = { "gui": "#C678DD", "cterm": "170", "cterm16": "5"} " Alternate cterm: 176
@@ -143,7 +143,7 @@ call s:h("VertSplit", { "fg": s:vertsplit }) " the column separating vertically 
 call s:h("Folded", {}) " line used for closed folds
 call s:h("FoldColumn", {}) " 'foldcolumn'
 call s:h("SignColumn", {}) " column where signs are displayed
-call s:h("IncSearch", {}) " 'incsearch' highlighting; also used for the text replaced with ":s///c"
+call s:h("IncSearch", { "fg": s:real_black, "bg": s:search_yellow }) " 'incsearch' highlighting; also used for the text replaced with ":s///c"
 call s:h("LineNr", { "fg": s:gutter_fg_grey, "bg": s:gutter_bg_grey }) " Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 call s:h("CursorLineNr", {}) " Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 call s:h("MatchParen", {}) " The character under the cursor or just before it, if it is a paired bracket, and its match.
@@ -156,7 +156,7 @@ call s:h("PmenuSel", { "bg": s:visual_grey }) " Popup menu: selected item.
 call s:h("PmenuSbar", { "bg": s:visual_grey }) " Popup menu: scrollbar.
 call s:h("PmenuThumb", { "bg": s:white }) " Popup menu: Thumb of the scrollbar.
 call s:h("Question", { "fg": s:purple }) " hit-enter prompt and yes/no questions
-call s:h("Search", { "fg": s:real_black, "bg": s:purple }) " Last search pattern highlighting (see 'hlsearch'). Also used for highlighting the current line in the quickfix window and similar items that need to stand out.
+call s:h("Search", { "fg": s:real_black, "bg": s:search_yellow }) " Last search pattern highlighting (see 'hlsearch'). Also used for highlighting the current line in the quickfix window and similar items that need to stand out.
 call s:h("SpecialKey", { "fg": s:special_grey }) " Meta and special keys listed with ":map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
 call s:h("SpellBad", { "fg": s:red }) " Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
 call s:h("SpellCap", { "fg": s:dark_yellow }) " Word that should start with a capital. This will be combined with the highlighting used otherwise.
