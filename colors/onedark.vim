@@ -61,6 +61,7 @@ endfunction
 " +-----------------+
 
 let s:red = { "gui": "#E06C75", "cterm": "204", "cterm16": "1"} " Alternate cterm: 168
+let s:warning_red = { "gui": "#FF0000", "cterm": "196", "cterm16": "9"} " Alternate cterm: 168
 "let s:dark_red = { "gui": "#e64040", "cterm": "196", "cterm16": "9"}
 
 let s:green = { "gui": "#98C379", "cterm": "114", "cterm16": "2"}
@@ -131,7 +132,7 @@ call s:h("Debug", {}) " debugging statements
 call s:h("Underlined", {}) " text that stands out, HTML links
 call s:h("Ignore", {}) " left blank, hidden
 call s:h("Error", { "fg": s:red, "bg": s:gutter_bg_grey }) " any erroneous construct
-call s:h("Todo", { "fg": s:purple }) " anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+call s:h("Todo", { "fg": s:red }) " anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 " +----------------------------------------------------------------------+
 " | Highlighting Groups (descriptions and ordering from `:h hitest.vim`) |
