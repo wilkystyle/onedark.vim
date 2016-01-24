@@ -5,6 +5,7 @@
 " License:    The MIT License (MIT)
 " Based On:   https://github.com/joshdick/onedark.vim/
 
+
 " +----------------+
 " | Initialization |
 " +----------------+
@@ -52,6 +53,7 @@ function! s:h(group, style)
     \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endfunction
 
+
 " +-----------------+
 " | Color Variables |
 " +-----------------+
@@ -78,6 +80,7 @@ let s:cursor_grey =  { "gui": "#2C323B", "cterm": "235", "cterm16": "15" } " TOD
 let s:visual_grey = { "gui": "#3E4451", "cterm": "237", "cterm16": "15" }
 let s:special_grey = { "gui": "#383C45", "cterm": "238", "cterm16": "15" }
 let s:vertsplit = { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }
+
 
 " +---------------------------------------------------------+
 " | Syntax Groups (descriptions and ordering from `:h w18`) |
@@ -169,6 +172,25 @@ call s:h("VisualNOS", { "bg": s:visual_grey }) " Visual mode selection when vim 
 call s:h("WarningMsg", { "fg": s:red }) " warning messages
 call s:h("WildMenu", {}) " current match in 'wildmenu' completion
 
+" TODO: Mike Test stuff for ctrlp extensions
+call s:h("CtrlPTabExtra", { "fg": s:purple })
+call s:h("CtrlPBufName", { "fg": s:purple })
+call s:h("CtrlPTagKind", { "fg": s:purple })
+call s:h("CtrlPqfLineCol", { "fg": s:purple })
+call s:h("CtrlPUndoT", { "fg": s:purple })
+call s:h("CtrlPUndoBr", { "fg": s:purple })
+call s:h("CtrlPUndoNr", { "fg": s:purple })
+call s:h("CtrlPUndoSv", { "fg": s:purple })
+call s:h("CtrlPUndoPo", { "fg": s:purple })
+call s:h("CtrlPBookmark", { "fg": s:purple })
+call s:h("CtrlPNoEntries", { "fg": s:purple })
+call s:h("CtrlPMatch", { "fg": s:purple })
+call s:h("CtrlPLinePre", { "fg": s:purple })
+call s:h("CtrlPPrtBase", { "fg": s:purple })
+call s:h("CtrlPPrtText", { "fg": s:purple })
+call s:h("CtrlPPrtCursor", { "fg": s:purple })
+
+
 " +--------------------------------+
 " | Language-Specific Highlighting |
 " +--------------------------------+
@@ -181,11 +203,12 @@ call s:h("rubyBlockParameterList", { "fg": s:red })
 call s:h("rubyInterpolation", { "fg": s:green })
 call s:h("rubyInterpolationDelimiter", { "fg": s:red })
 
+
 " +---------------------+
 " | Plugin Highlighting |
 " +---------------------+
 
-" Signify, git-gutter
+" Signify, git-gutter, CtrlP
 hi link SignifySignAdd              LineNr
 hi link SignifySignDelete           LineNr
 hi link SignifySignChange           LineNr
