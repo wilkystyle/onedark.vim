@@ -134,9 +134,9 @@ call s:h("CursorColumn", { "bg": s:cursor_grey }) " the screen column that the c
 call s:h("CursorLine", { "bg": s:cursor_grey }) " the screen line that the cursor is in when 'cursorline' is set
 call s:h("Directory", {}) " directory names (and other special names in listings)
 call s:h("DiffAdd", { "fg": s:green }) " diff mode: Added line
-call s:h("DiffChange", { "fg": s:dark_yellow }) " diff mode: Changed line
+call s:h("DiffChange", { "fg": s:blue }) " diff mode: Changed line
 call s:h("DiffDelete", { "fg": s:red }) " diff mode: Deleted line
-call s:h("DiffText", { "fg": s:blue }) " diff mode: Changed text within a changed line
+call s:h("DiffText", { "fg": s:real_black, "bg": s:purple }) " diff mode: Changed text within a changed line
 call s:h("ErrorMsg", {}) " error messages on the command line
 call s:h("VertSplit", { "fg": s:vertsplit }) " the column separating vertically split windows
 call s:h("Folded", {}) " line used for closed folds
